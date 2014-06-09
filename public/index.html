@@ -3,7 +3,7 @@
 <title>CalcBee</title>
 
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -14,7 +14,20 @@ left:0px;width:20%;
 top:0px;
 bottom:0px;
 background-color:gray;
+padding:20px;
 }
+#nav-ul{
+list-style:none;
+margin:0;
+padding:0;
+}
+#nav-ul li{
+display:block;
+margin:0;
+padding:0;
+}
+
+
 #middle-wrap{
 position:fixed;
 left:20%;
@@ -23,14 +36,6 @@ top:0px;
 bottom:0px;
 background-color:gold;
 }
-#right-wrap{
-position:fixed;
-right:0px;width:20%;
-top:0px;
-bottom:0px;
-background-color:gray;
-}
-
 #leftarrow, #rightarrow{
 color:#999;
 position:absolute;
@@ -92,10 +97,22 @@ border:solid 1px black;
 .question .inputarea .mathjaxpreview-wrap .mathjaxpreview{
 padding:10px;
 }
+
+
+#right-wrap{
+position:fixed;
+right:0px;width:20%;
+top:0px;
+bottom:0px;
+background-color:gray;
+}
 </style>
 
 <div id="left-wrap">
-navigation
+<ul id="nav-ul">
+<li>asdf</li>
+<li>asdf</li>
+</ul>
 </div>
 
 <div id="middle-wrap">
