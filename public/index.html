@@ -1,0 +1,293 @@
+<html>
+<head>
+<title>CalcBee</title>
+<!--(darkish or palish, not intense) Yellow text on black/dark bg.-->
+<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700' rel='stylesheet' type='text/css'>
+<style>
+body{
+background-color:#000;
+margin:0px;padding:0px;
+font-family:Comfortaa, Open Sans, Droid Sans, Helvetica, Arial, sans-serif;
+font-weight:400;
+font-size:16pt;
+color:#ff0;
+}
+a{color:#ff6;}
+a:hover{color:#cc0;}
+a:active{color:#0f0;}
+a:visited{color:inherit;}
+a.plainlink:visited{color:#ff6;}
+a.header{
+font-size:54pt;
+height:100px;
+line-height:100px;
+font-weight:700;
+display:inline-block;
+text-decoration:none;
+}
+#navbar{
+position:fixed;
+top:0px;
+left:0px;
+right:0px;
+height:50px;
+background-color:black;
+color:yellow;
+z-index:1000;
+}
+#fb,#tw,#aops,#mail{
+width:60px;
+margin:0px;padding:0px;padding-top:10px;
+position:relative;top:-10px;
+display:inline-block;
+height:50px;
+text-align:center;
+transition:top 0.5s;
+-webkit-transition:top 0.5s;
+-moz-transition:top 0.5s;
+-o-transition:top 0.5s;
+-ms-transition:top 0.5s;
+}
+#fb img,#tw img,#aops img,#mail img{
+height:50px;
+}
+#fb:hover,#tw:hover,#aops:hover,#mail:hover{
+top:0px;
+}
+#fb{background-color:#3B5998;color:white;}
+#tw{background-color:#00aced;color:white;}
+#aops{background-color:#62912B;color:white;}
+#mail{background-color:#999999;color:black;}
+
+.navlink{
+padding:0px 20px;
+display:inline-block;
+height:50px;
+line-height:50px;
+text-decoration:none;
+background-color:#000;
+color:#ff0;
+transition:background-color 0.5s;
+-webkit-transition:background-color 0.5s;
+-moz-transition:background-color 0.5s;
+-o-transition:background-color 0.5s;
+-ms-transition:background-color 0.5s;
+}
+.navlink:hover{
+background-color:#1c1c1c;
+}
+.navlink.reg{
+background-color:#ff0;
+color:#000;
+}
+.navlink.reg:hover{
+background-color:#ff9;
+}
+
+#wrapper{
+position:fixed;
+top:50px;left:0px;right:0px;bottom:0px;
+overflow-y:scroll;
+background-image:url('bg1.png');
+}
+
+#title{
+width:100%;height:100%;
+}
+#title>div{
+position:absolute;
+top:15%;bottom:15%;
+left:10%;right:10%;
+background-color:rgba(0,0,0,0.8);
+padding:50px;
+text-align:center;
+}
+#title a.btn{
+text-decoration:none;
+display:inline-block;
+width:120px;height:60px;
+line-height:60px;
+text-align:center;
+background-color:#000;
+color:#FF0;
+font-weight:400;
+margin:10px;
+transition:background-color 0.5s;
+-webkit-transition:background-color 0.5s;
+-moz-transition:background-color 0.5s;
+-o-transition:background-color 0.5s;
+-ms-transition:background-color 0.5s;
+}
+#title a.btn:hover{
+background-color:#333;
+}
+#title a.reg.btn{
+background-color:#FF0;
+color:black;
+}
+#title a.reg.btn:hover{
+background-color:#FF9;
+}
+
+
+/*http://blog.vivekv.com/rotate-image-360deg-when-mouse-hover-using-css-3.html*/
+.downarrow,.uparrow{
+	height:70px;
+	-webkit-transition: -webkit-transform 0.8s,opacity 0.8s;
+    -moz-transition: -moz-transform 0.8s,opacity 0.8s;
+    -o-transition: -o-transform 0.8s,opacity 0.8s;
+	-ms-transition: -ms-transform 0.8s,opacity 0.8s;
+    transition: transform 0.8s,opacity 0.8s;
+     
+    overflow:hidden;
+	opacity:0.5;
+}
+.downarrow:hover,.uparrow:hover{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg); 
+    -o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	opacity:1.0;
+}
+header{
+height:100px;
+background-color:black;
+color:yellow;
+text-align:center;
+}
+header.reg{
+background-color:yellow;
+color:black;
+}
+.uparrow{
+height:100px;
+//float:right;
+right:20px;
+position:absolute;
+}
+
+.content{
+padding:50px;
+min-height:300px;
+background-color:rgba(0,0,0,0.8);
+}
+
+header{
+text-align:center;
+}
+p{
+text-indent:3em;
+}
+footer{
+display:block;
+padding:20px 0;
+background-color:rgba(0,0,0,0.8);
+}
+footer div{
+display:block;
+width:15%;min-width:250px;
+margin:0 auto;
+background-color:#000000;
+text-align:center;
+font-weight:700;
+border-radius:4px;
+}
+</style>
+</head>
+<body>
+<div id="navbar">
+<div style="float:left">
+<span id="logo">CalcBee</span>
+<!--icons from http://www.designsmix.com/resources/free-social-media-icon-sets-with-psd-and-vector-resources/-->
+<a href="" id="fb"><img src="fb.png"/></a><a href="" id="tw"><img src="tw.png"/></a><a href="" id="aops"><img src="aops.png"/></a><a href="" id="mail"><img src="mail.png"/></a>
+</div>
+<div style="float:right">
+<a href="#contest" class='navlink'>Contest
+</a><a href="#about" class='navlink'>About
+</a><a href="#sponsors" class='navlink'>Sponsors
+</a><a href="#register" class='reg navlink'>Register</a>
+</div>
+</div>
+
+
+<div id="wrapper">
+<section id="title"><div>
+<!--
+--todo-- maybe the buttons are too spaced apart in higher resolutions
+also what with mobile does the jq and stuff even work? Hover certainly doesn't but isn't necessary
+-->
+<a class='header' href='#title'>CalcBee</a>
+<div>
+<a href="#contest" class='btn'>Contest</a>
+<a href="#about" class='btn'>About</a>
+<a href="#sponsors" class='btn'>Sponsors</a>
+</div>
+<div>
+<a href="#register" class="reg btn">Register</a>
+</div>
+<div><a href="#contest"><img src="downarrow.png" class="downarrow"/></a></div>
+</div></section>
+<section id="contest">
+<header><a class='header' href='#contest'>Contest</a><a href="#title"><img src='uparrow.png' class='uparrow'/></a></header>
+<div class='content'>
+[[TBD, FILLER CONTENT]<br>
+<p>The contest will be on [time] at [place].</p>
+The contest will consist of three parts.
+<ul>
+<li>Blah</li>
+<li>Blah</li>
+<li>Bleh</li>
+</ul>
+</section>
+<section id="about">
+<header><a class='header' href='#about'>About</a><a href="#title"><img src='uparrow.png' class='uparrow'/></a></header>
+<div class='content'>
+Founded by Ahaan Rungta and Clive Chan, 2014.
+<p>We're affiliated with the <a class='plainlink' href="http://www.onlinescienceolympiads.org">Online Science Olympiads</a>. If you like physics, chemistry, or computer science, you should check them out!</p>
+</div>
+</section>
+<section id="sponsors">
+<header><a class='header' href='#sponsors'>Sponsors</a><a href="#title"><img src='uparrow.png' class='uparrow'/></a></header>
+<div class='content'>
+Thanks to our wonderful sponsors.
+[LHS field house or wherever]
+</div>
+</section>
+<section id="register">
+<header class='reg'><a class='header' href='#register'>Register</a><a href="#title"><img src='uparrowreg.png' class='uparrow'/></a></header>
+<div class='content'></div>
+</section>
+<footer>
+<div>&copy; CalcBee 2014.</div>
+</footer>
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+<script>
+$(document).ready(function(){
+	var $w=$('#wrapper');
+	
+	//Adapted from ---
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash,
+	    $target = $(target);
+
+	    $w.stop().animate({
+	        'scrollTop': $w.scrollTop() + $target.offset().top - $w.offset().top
+	    }, 500, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+	//end
+	
+	$w.scroll(function(e){
+		$w.css('background-position','0 '+(1600-$w.scrollTop()/4)+'px');
+	}).scroll();
+});
+//--todo--highlight the navbar item based on where you are on the page (onscroll cmp with scrolltops)
+</script>
+</body>
+</html>
