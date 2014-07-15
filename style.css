@@ -1,0 +1,154 @@
+body{
+	margin:0px;padding:0px;
+	font-family:Comfortaa, Open Sans, Droid Sans, Helvetica, Arial, sans-serif;
+	font-weight:400;
+	font-size:18pt;
+	color:#ff0;
+	text-align:center;
+}
+a{text-decoration:none;}
+a.plainlink{color:#cc6;text-decoration:underline;}
+a:active{color:#fff;}
+a.header{
+	font-size:54pt;
+	height:100px;
+	line-height:100px;
+	font-weight:700;
+	display:inline-block;
+	width:100%;
+}
+p{margin-bottom:1em;}
+
+
+/*bg for yellow on black, bgr for reverse; add h for hover change*/
+.bg{color:#ff0;background-color:#000;}
+.bgr{color:#000;background-color:#ff0;}
+.bg.h,.bgr.h{
+	-webkit-transition:background-color 0.5s;
+	-moz-transition:background-color 0.5s;
+	-o-transition:background-color 0.5s;
+	-ms-transition:background-color 0.5s;
+	transition:background-color 0.5s;
+}
+.bg.h:hover{background-color:#333;}
+.bgr.h:hover{background-color:#ffa;}
+
+
+#navbar{
+	position:fixed;
+	top:0px;left:0px;right:0px;
+	height:50px;
+	z-index:1000;
+	background-color:black;
+	/*--todo--hm semitransparent? :)*/
+}
+#navbar *{
+	height:50px;line-height:50px;
+	display:inline-block;
+	position:relative;
+}
+#logo{
+	width:200px;
+	top:-19px;
+	font-size:30pt;
+}
+.sn{
+	width:60px;
+	margin:0px;padding:0px;padding-top:10px;
+	top:-10px;
+	-webkit-transition:top 0.5s;
+	-moz-transition:top 0.5s;
+	-o-transition:top 0.5s;
+	-ms-transition:top 0.5s;
+	transition:top 0.5s;
+}
+.sn:hover{top:0px;}
+#fb{background-color:#3B5998;}
+#tw{background-color:#00aced;}
+#aops{background-color:#62912B;}
+#mail{background-color:#999999;}
+.navlink{padding:0px 10px;}
+
+
+#wrapper{
+	position:fixed;
+	top:50px;left:0px;right:0px;bottom:0px;
+	overflow-y:scroll;
+	background-image:url('img/bg1.png');
+}
+
+#title{width:100%;height:100%;}
+#title>div{
+	position:absolute;
+	top:15%;bottom:15%;
+	left:10%;right:10%;
+	background-color:rgba(0,0,0,0.8);
+	padding:50px;
+}
+#title a.header{color:#ff0;}
+
+.btn{
+	display:inline-block;
+	width:140px;
+	height:60px;line-height:60px;
+	margin:20px;
+}
+
+/*http://blog.vivekv.com/rotate-image-360deg-when-mouse-hover-using-css-3.html*/
+.downarrow{height:70px;}
+.uparrow{
+	height:100px;
+	right:0px;
+	position:absolute;
+}
+.downarrow,.uparrow{
+	-webkit-transition: -webkit-transform 0.8s,opacity 0.8s;
+	-moz-transition: -moz-transform 0.8s,opacity 0.8s;
+	-o-transition: -o-transform 0.8s,opacity 0.8s;
+	-ms-transition: -ms-transform 0.8s,opacity 0.8s;
+	transition: transform 0.8s,opacity 0.8s;
+	
+	overflow:hidden;
+	opacity:0.5;
+}
+.downarrow:hover,.uparrow:hover{
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg); 
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+	
+	opacity:1.0;
+}
+
+header>.header{
+border-top:solid 1px #ff0;
+}
+header>.header.bgr{
+border-top:solid 1px #000;
+}
+.content{
+	text-align:left;
+	padding:2% 10%;
+	min-height:350px;
+	background-color:rgba(0,0,0,0.8);
+}
+
+#regform label{display:block;}
+#regform input{
+	font-size:inherit;
+	font-family:inherit;
+}
+
+footer{
+	display:block;
+	padding:20px 0;
+	background-color:rgba(0,0,0,0.8);
+}
+footer div{
+	display:block;
+	width:15%;min-width:250px;
+	margin:0 auto;
+	font-weight:700;
+	border-radius:4px;
+}
