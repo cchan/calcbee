@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<!--todo-- standards compliance, usual header/metadata stuff, cross-browser-ness, split file
-how are comments handled in CSS?
+<!--todo-- standards compliance, usual header/metadata stuff, cross-browser-ness, cross-resolution-ness, mobility
+
+TOO MUCH YELLOW PAINFUL
+
+jq Mobile?
+Symfony, NoSQL
 
 --todo-- maybe the buttons are too spaced apart in higher resolutions
 also what with mobile does the jq and stuff even work? Hover certainly doesn't but isn't necessary
@@ -20,7 +24,7 @@ setup ****venue****, sn pages
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-	<meta name="description" content="A calculus competition event for high school.">
+	<meta name="description" content="A calculus competition event for high schoolers.">
 	<meta name="keywords" content="CalcBee,Calculus,Math,Competition,Contest,Event,Integration,Bee">
 	<meta name="author" content="CalcBee Team">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -38,9 +42,9 @@ setup ****venue****, sn pages
 	<div style="float:left">
 		<a id="logo" href="#title" class='bg h'>CalcBee</a><!--
 		(icons from http://www.designsmix.com/resources/free-social-media-icon-sets-with-psd-and-vector-resources/)
-		--><a href="" id="fb" class='sn'><img src="img/fb.png" title="Facebook" alt="Facebook"/></a><!--
-		--><a href="" id="tw" class='sn'><img src="img/tw.png" title="Twitter" alt="Twitter"/></a><!--
-		--><a href="" id="aops" class='sn'><img src="img/aops.png" title="Art of Problem Solving" alt="Art of Problem Solving"/></a><!--
+		--><a href="" id="fb" class='sn'><img src="img/fb.png" title="Find us on Facebook" alt="Facebook"/></a><!--
+		--><a href="" id="tw" class='sn'><img src="img/tw.png" title="Find us on Twitter" alt="Twitter"/></a><!--
+		--><a href="" id="aops" class='sn'><img src="img/aops.png" title="Find us on Art of Problem Solving" alt="Art of Problem Solving"/></a><!--
 		--><a href="" id="mail" class='sn'><img src="img/mail.png" title="Email Us" alt="Email Us"/></a>
 	</div>
 	<div style="float:right">
@@ -54,9 +58,13 @@ setup ****venue****, sn pages
 
 <!--General layout derived from http://lexhack.org-->
 <div id="wrapper">
+
+<span style="border:solid 5px #000;font-size:0.8em;position:fixed;display:block;left:20%;right:20%;text-align:center;top:60px;z-index:9001;border-radius:20px;font-weight:700;" class="bgr">Hi! CalcBee is still under construction. It'll be properly up and running soon!</span>
+
 	<section id="title"><div>
 		<a class='header' href='#title'>CalcBee</a>
-		<div>Monday, Jan. 78, 2015 @ <a href="http://maps.google.com/" class='plainlink'>Nowhere</a></div>
+		<div style="font-weight:700;font-size:1.3em;margin-bottom:0.6em;margin-top:-0.3em">A calculus competition event for high schoolers.</div>
+		<div style="font-style:italic;">Monday, Jan. 78, 2015 @ <a href="http://maps.google.com/" class='plainlink'>Nowhere</a></div>
 		<div>
 			<a href="#contest" class='btn bg h'>Contest</a>
 			<a href="#about" class='btn bg h'>About</a>
@@ -65,7 +73,8 @@ setup ****venue****, sn pages
 		<div><a href="#register" class="btn bgr h">Register</a></div>
 		<div><a href="#contest"><img src="img/downarrow.png" class="downarrow"/></a></div>
 	</div></section>
-	<section id="contest">
+	<a class="anchor" id="contest"></a>
+	<section>
 		<header><a class='header bg' href='#contest'>Contest</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content'>
 			[[TBD, FILLER CONTENT]<br>
@@ -78,7 +87,8 @@ setup ****venue****, sn pages
 			</ul>
 		</div>
 	</section>
-	<section id="about">
+	<a class="anchor" id="about"></a>
+	<section>
 		<header><a class='header bg' href='#about'>About</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content'>
 			<h2>Staff</h2>
@@ -90,7 +100,8 @@ setup ****venue****, sn pages
 			If you like physics, chemistry, or computer science, you should go check them out!</p>
 		</div>
 	</section>
-	<section id="sponsors">
+	<a class="anchor" id="sponsors"></a>
+	<section>
 		<header><a class='header bg' href='#sponsors'>Sponsors</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content'>
 			<p>Thank you to our wonderful sponsors!</p>
@@ -101,7 +112,8 @@ setup ****venue****, sn pages
 			You can donate by clicking here. --todo--</p>
 		</div>
 	</section>
-	<section id="register">
+	<a class="anchor" id="register"></a>
+	<section>
 		<header><a class='header bgr' href='#register'>Register</a><a href="#title"><img src='img/uparrowreg.png' class='uparrow'/></a></header>
 		<div class='content'>
 			<form id="regform">
@@ -117,7 +129,7 @@ setup ****venue****, sn pages
 		</div>
 	</section>
 	<footer>
-		<div class='bg h' title='Coded in HTML, CSS, and JavaScript by Clive Chan.'>&copy; CalcBee 2014.</div>
+		<div class='bg h' title='Coded in HTML, CSS, and JavaScript by Clive Chan, 2014.'>&copy; CalcBee 2014.</div>
 	</footer>
 </div>
 
@@ -152,5 +164,14 @@ $(document).ready(function(){
 });
 //--todo--highlight the navbar item based on where you are on the page (onscroll cmp with scrolltops)
 </script>
+<!-- Trying to be as compatible as possible.
+
+<script type="text/javascript">/*Tells users their browser is outdated.*/
+var $buoop={};$buoop.ol=window.onload;window.onload=function(){try{if($buoop.ol)$buoop.ol();}catch(e){}
+var e=document.createElement("script");e.setAttribute("type","text/javascript");
+e.setAttribute("src","//browser-update.org/update.js");document.body.appendChild(e);}</script>
+
+<style>.noscript{display:block;}</style><script>$(".noscript").show();</script>
+-->
 </body>
 </html>
