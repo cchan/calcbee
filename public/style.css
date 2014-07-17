@@ -1,14 +1,25 @@
+/*Main stylesheet for CalcBee.*/
+
+/*General styles*/
 body{
 	margin:0px;padding:0px;
 	font-family:Comfortaa, Open Sans, Droid Sans, Helvetica, Arial, sans-serif;
+	/*Open Sans doesn't have bold.*/
 	font-weight:400;
 	font-size:18pt;
 	color:#ff0;
 	text-align:center;
+	overflow:hidden;
 }
 a{text-decoration:none;}
 a.plainlink{color:#cc6;text-decoration:underline;}
 a:active{color:#fff;}
+a.anchor{
+	display:block;
+	position:relative;
+	top:-50px;
+	visibility:hidden;
+}
 a.header{
 	font-size:54pt;
 	height:100px;
@@ -19,27 +30,27 @@ a.header{
 }
 p{margin-bottom:1em;}
 
-
+/*Since we have so much of it, bgcolor/color style classes.*/
 /*bg for yellow on black, bgr for reverse; add h for hover change*/
 .bg{color:#ff0;background-color:#000;}
 .bgr{color:#000;background-color:#ff0;}
-.bg.h,.bgr.h{
-	-webkit-transition:background-color 0.5s;
-	-moz-transition:background-color 0.5s;
-	-o-transition:background-color 0.5s;
-	-ms-transition:background-color 0.5s;
-	transition:background-color 0.5s;
+.bg.h,.bgr.h{/*also for box-shadow buttons.*/
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	-ms-transition:all 0.5s;
+	transition:all 0.5s;
 }
-.bg.h:hover{background-color:#333;}
-.bgr.h:hover{background-color:#ffa;}
+.bg.h:hover{background-color:#222;}
+.bgr.h:hover{background-color:#ffb;}
 
-
+/*The fixed thing at the top.*/
 #navbar{
 	position:fixed;
 	top:0px;left:0px;right:0px;
 	height:50px;
 	z-index:1000;
-	background-color:black;
+	background-color:rgba(0,0,0,0.7);
 	/*--todo--hm semitransparent? :)*/
 }
 #navbar *{
@@ -49,8 +60,8 @@ p{margin-bottom:1em;}
 }
 #logo{
 	width:200px;
-	top:-19px;
 	font-size:30pt;
+	vertical-align:top;/*Yaugh. The default is vertical-align: baseline, which aligns its baseline to the parent's baseline.*/
 }
 .sn{
 	width:60px;
@@ -70,46 +81,64 @@ p{margin-bottom:1em;}
 .navlink{padding:0px 10px;}
 
 
+/*The bottom 90%, fixed and scrollable by itself.*/
 #wrapper{
 	position:fixed;
-	top:50px;left:0px;right:0px;bottom:0px;
+	top:0px;left:0px;right:0px;bottom:0px;
 	overflow-y:scroll;
+	zindex:0;
+	-webkit-overflow-scrolling:touch;
+	overflow-x:hidden;
+	
 	background-image:url('img/bg1.png');
 }
 
+/*Title slide*/
 #title{width:100%;height:100%;}
 #title>div{
 	position:absolute;
 	top:15%;bottom:15%;
 	left:10%;right:10%;
-	background-color:rgba(0,0,0,0.8);
+	background-color:rgba(0,0,0,0.7);
 	padding:50px;
 }
-#title a.header{color:#ff0;}
-
+#title a.header{color:#ff0;}/*It turns the :visited color. Hacky but the easiest way.*/
 .btn{
 	display:inline-block;
 	width:140px;
 	height:60px;line-height:60px;
-	margin:20px;
+	margin:10px 20px;
+}
+.btn.bg.h:hover{
+-moz-box-shadow: 0 0 20px #ff0;
+-webkit-box-shadow: 0 0 20px #ff0;
+box-shadow: 0 0 20px #ff0;
+filter:progid:DXImageTransform.Microsoft.Glow(Color=yellow,Strength=20);
+z-index:10000;
+}
+.btn.bgr.h:hover{
+-moz-box-shadow: 0 0 50px #000;
+-webkit-box-shadow: 0 0 50px #000;
+box-shadow: 0 0 50px #000;
+filter:progid:DXImageTransform.Microsoft.Glow(Color=black,Strength=50);
+z-index:10000;
 }
 
+/*All those arrows all over the place*/
 /*http://blog.vivekv.com/rotate-image-360deg-when-mouse-hover-using-css-3.html*/
-.downarrow{height:70px;}
+.downarrow{height:60px;opacity:0.5;}
 .uparrow{
 	height:100px;
-	right:0px;
-	position:absolute;
+	position:absolute;right:0px;
+	opacity:0.3;
 }
 .downarrow,.uparrow{
-	-webkit-transition: -webkit-transform 0.8s,opacity 0.8s;
-	-moz-transition: -moz-transform 0.8s,opacity 0.8s;
-	-o-transition: -o-transform 0.8s,opacity 0.8s;
-	-ms-transition: -ms-transform 0.8s,opacity 0.8s;
-	transition: transform 0.8s,opacity 0.8s;
-	
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
 	overflow:hidden;
-	opacity:0.5;
 }
 .downarrow:hover,.uparrow:hover{
 	-webkit-transform:rotate(360deg);
@@ -117,38 +146,35 @@ p{margin-bottom:1em;}
 	-o-transform:rotate(360deg);
 	-ms-transform:rotate(360deg);
 	transform:rotate(360deg);
-	
 	opacity:1.0;
 }
 
-header>.header{
-border-top:solid 1px #ff0;
-}
-header>.header.bgr{
-border-top:solid 1px #000;
-}
+
+/*For each slide*/
+header>.header{border-top:solid 1px #ff0;}
+header>.header.bgr{border-top:solid 1px #000;}
 .content{
 	text-align:left;
 	padding:2% 10%;
 	min-height:350px;
-	background-color:rgba(0,0,0,0.8);
+	background-color:rgba(0,0,0,0.7);
 }
 
+/*Registration! Make sure everything is inherited in the inputs too. Has the bg class included.*/
 #regform label{display:block;}
 #regform input{
 	font-size:inherit;
 	font-family:inherit;
 }
 
+/*Footer.*/
 footer{
 	display:block;
 	padding:20px 0;
-	background-color:rgba(0,0,0,0.8);
+	background-color:rgba(0,0,0,0.7);
 }
 footer div{
-	display:block;
 	width:15%;min-width:250px;
 	margin:0 auto;
-	font-weight:700;
-	border-radius:4px;
+	border-radius:4px;/*Doesn't matter about compatibility.*/
 }
