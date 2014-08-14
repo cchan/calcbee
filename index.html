@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <!--todo-- standards compliance, usual header/metadata stuff, cross-browser-ness, cross-resolution-ness, mobility
 
-TOO MUCH YELLOW PAINFUL
-
 jq Mobile?
 Symfony, NoSQL
 
@@ -17,6 +15,9 @@ make form better
 mobile... some php-side wrangling with arrows presence, navbar presence, text sizes, title alignment, etc.
 
 setup ****venue****, sn pages
+
+
+@Ahaan: plz tell me the info, also give photos of SLH to make sure he likes it!!
 -->
 <html lang='en'>
 <head>
@@ -45,7 +46,7 @@ setup ****venue****, sn pages
 		--><a href="" id="fb" class='sn'><img src="img/fb.png" title="Find us on Facebook" alt="Facebook"/></a><!--
 		--><a href="" id="tw" class='sn'><img src="img/tw.png" title="Find us on Twitter" alt="Twitter"/></a><!--
 		--><a href="" id="aops" class='sn'><img src="img/aops.png" title="Find us on Art of Problem Solving" alt="Art of Problem Solving"/></a><!--
-		--><a href="" id="mail" class='sn'><img src="img/mail.png" title="Email Us" alt="Email Us"/></a>
+		--><a href="mailto:info@calcbee.org" id="mail" class='sn'><img src="img/mail.png" title="Email Us" alt="Email Us"/></a>
 	</div>
 	<div style="float:right">
 		<a href="#title" class='navlink bg h'>Main</a><!--
@@ -56,15 +57,12 @@ setup ****venue****, sn pages
 	</div>
 </div>
 
-<!--General layout derived from http://lexhack.org-->
+<!--Layout concept derived and modified from http://lexhack.org-->
 <div id="wrapper">
-
-<span style="border:solid 5px #000;font-size:0.8em;position:fixed;display:block;left:20%;right:20%;text-align:center;top:60px;z-index:9001;border-radius:20px;font-weight:700;" class="bgr">Hi! CalcBee is still under construction. It'll be properly up and running soon!</span>
-
 	<section id="title"><div>
 		<a class='header' href='#title'>CalcBee</a>
 		<div style="font-weight:700;font-size:1.3em;margin-bottom:0.6em;margin-top:-0.3em">A calculus competition event for high schoolers.</div>
-		<div style="font-style:italic;">Monday, Jan. 78, 2015 @ <a href="http://maps.google.com/" class='plainlink'>Nowhere</a></div>
+		<div style="font-style:italic;">Monday, Jan. 78, 2015 @ <a href="http://maps.google.com/" class='plainlink'>LHS Science Lecture Hall</a></div>
 		<div>
 			<a href="#contest" class='btn bg h'>Contest</a>
 			<a href="#about" class='btn bg h'>About</a>
@@ -77,25 +75,53 @@ setup ****venue****, sn pages
 	<section>
 		<header><a class='header bg' href='#contest'>Contest</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content'>
-			[[TBD, FILLER CONTENT]<br>
-			<p>The contest will be on [time] at [place].</p>
-			The contest will consist of three parts.
-			<ul>
-				<li>Blah</li>
-				<li>Blah</li>
-				<li>Bleh</li>
-			</ul>
-		</div>
+			<p>The contest will be on [time] at the Lexington High School Science Lecture Hall. Just show up at the front door of Lexington High School and we'll show you there.</p>
+			<p>CalcBee consists of three parts:</p>
+			<style>
+			#rules div{
+			vertical-align:top;
+			display:inline-block;width:27%;
+			padding:3%
+			}
+			#rules h3{
+			text-align:center;
+			}
+			</style>
+			<div id="rules">
+				<div><h3>Individual Written Exam</h3>20 questions total:<br>5 integration bee-style<br>10 short answer<br>5 proof questions</div>
+				<div><h3>Relays</h3>Relay 1: when in the course of human events<br>Relay 2: lorem ipsum dolor sit amet</div>
+				<div><h3>Final Round</h3>blah blah blah blah blah blah</div>
+			</div>
 	</section>
 	<a class="anchor" id="about"></a>
 	<section>
 		<header><a class='header bg' href='#about'>About</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content'>
+			Questions? Feedback? You can contact us at <a class="plainlink" href="mailto:info@calcbee.org">info@calcbee.org</a>.
 			<h2>Staff</h2>
-			Founded by Ahaan Rungta and Clive Chan, 2014.
-			Event Coordinator: 
-			Problem Czar: 
-			Problem Writers: 
+			<div style="margin-left:1em;padding-top:0px;">​
+				<!--Chrome randomly adds &#8203; here.-->
+				<h3 style="margin-left:-1em;margin-top:0px;">Contest Director</h3>
+				Ahaan Rungta<br>
+				
+				<h3 style="margin-left:-1em;">Webmaster</h3>
+				Clive Chan<br>
+				
+				<h3 style="margin-left:-1em;">Problem Czars</h3>
+				Ahaan Rungta<br>
+				Yongyi Chen<br>
+				Lewis Chen<br>
+				Sotiri Komissopoulos<br>
+				Jon Claus<br>
+				Kavish Gandhi<br>
+				Joel Brewster Lewis<br>
+				Josh Max Silverman<br>
+				
+				<h3 style="margin-left:-1em;">On-site staffers</h3>
+				Ahaan Rungta<br>
+				Kavish Gandhi<br>
+			</div>
+			<br>
 			<p>We're affiliated with the <a class='plainlink' href="http://www.onlinescienceolympiads.org">Online Science Olympiads</a>.
 			If you like physics, chemistry, or computer science, you should go check them out!</p>
 		</div>
@@ -104,28 +130,18 @@ setup ****venue****, sn pages
 	<section>
 		<header><a class='header bg' href='#sponsors'>Sponsors</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content'>
-			<p>Thank you to our wonderful sponsors!</p>
-			[images here; LHS field house or wherever]
-			<h2>Would you like to support CalcBee?</h2>
-			<p>Calcbee is run by high school students on their spare time, 
-			and it costs a surprising amount to run an event like this. Help us out!
-			You can donate by clicking here. --todo--</p>
+			<a href="http://wolfram.com"><img src="img/wolfram.png" alt="Wolfram"/></a>
+			<a href="http://brilliant.org"><img src="img/brilliant.png" alt="Brilliant"/></a>
+			<a href="http://?????????????"><img src="img/harvardbookstore.png" alt="Harvard Bookstore"/></a>
+			<p>Thank you to our sponsors! Without their generous support, there would be no CalcBee.</p>
 		</div>
 	</section>
 	<a class="anchor" id="register"></a>
 	<section>
 		<header><a class='header bgr' href='#register'>Register</a><a href="#title"><img src='img/uparrowreg.png' class='uparrow'/></a></header>
 		<div class='content'>
-			<form id="regform">
-				<table>
-					<tr><td>Name:<td><input type="text" placeholder="Person" class="bg" />
-					<tr><td>Email:<td><input type="text" placeholder="person@calcbee.org" class="bg" />
-					<tr><td colspan='2'>Since no one likes bots, prove you're not one:
-					<tr><td colspan='2'>bleh
-					<!--Calc-ey thing, in text: What is the integral from zero to five of quantity x minus one to the seventh power?-->
-					<tr><td>Answer:<td><input type="text" placeholder="9001" class="bg" />
-				</table>
-			</form>
+			Registration is simple! Just enter your name, email, and grade.
+			<!--Get Google Form: Full Name, Email, Grade, [Team]-->
 		</div>
 	</section>
 	<footer>
@@ -140,7 +156,7 @@ $(document).ready(function(){
 	var $w=$('#wrapper');
 	
 	//Smooth scrolling.
-	//Adapted from ---
+	//Adapted from //http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 		
@@ -171,7 +187,7 @@ var $buoop={};$buoop.ol=window.onload;window.onload=function(){try{if($buoop.ol)
 var e=document.createElement("script");e.setAttribute("type","text/javascript");
 e.setAttribute("src","//browser-update.org/update.js");document.body.appendChild(e);}</script>
 
-<style>.noscript{display:block;}</style><script>$(".noscript").show();</script>
+<style>.noscript{display:block;}</style><script>$(".noscript").hide();</script>
 -->
 </body>
 </html>
