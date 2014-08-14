@@ -34,6 +34,10 @@ h1,h2,h3{
 margin:0px;
 margin-top:1em;
 }
+.content h2, .content h3{
+margin-left:-1em;
+font-weight:bold;
+}
 
 /*Since we have so much of it, bgcolor/color style classes.*/
 /*bg for yellow on black, bgr for reverse; add h for hover change*/
@@ -166,12 +170,20 @@ header>.header.bgr{border-top:solid 1px #000;}
 	background-color:rgba(0,0,0,0.7);
 }
 
-/*Registration! Make sure everything is inherited in the inputs too. Has the bg class included.*/
-#regform label{display:block;}
-#regform input{
-	font-size:inherit;
-	font-family:inherit;
+/*Sponsors*/
+.content img{
+margin:20px;
+height:100px;
 }
+
+/*Registration.*/
+#reg{display:block;margin-left:auto;margin-right:auto;}
+#reg .ss-required-asterisk{color:red;}
+#reg .error-message, #reg .required-message, #reg .ss-password-warning{display:none;}
+#reg .ss-choices{list-style-type:none;}
+#reg input{color:black;margin-left:1em;}
+#reg input#ss-submit{margin-left:0;}
+#reg .ss-form-question{margin-bottom:20px;}
 
 /*Footer.*/
 footer{
