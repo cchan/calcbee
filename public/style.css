@@ -6,7 +6,7 @@ body{
 	font-family:Comfortaa, Open Sans, Droid Sans, Helvetica, Arial, sans-serif;
 	/*Open Sans doesn't have bold.*/
 	font-weight:400;
-	font-size:18pt;
+	font-size:14pt;
 	color:#ff0;
 	text-align:center;
 	overflow:hidden;
@@ -29,6 +29,11 @@ a.header{
 	width:100%;
 }
 p{margin-bottom:1em;}
+
+h1,h2,h3{
+margin:0px;
+margin-top:1em;
+}
 
 /*Since we have so much of it, bgcolor/color style classes.*/
 /*bg for yellow on black, bgr for reverse; add h for hover change*/
@@ -91,6 +96,7 @@ p{margin-bottom:1em;}
 	overflow-x:hidden;
 	
 	background-image:url('img/bg1.png');
+	background-position:top center;
 }
 
 /*Title slide*/
