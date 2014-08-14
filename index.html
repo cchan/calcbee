@@ -53,7 +53,8 @@ JS SN(others?) GA HBS
 
 <!--Layout concept derived and modified from http://lexhack.org-->
 <div id="wrapper">
-	<section id="title"><div>
+	<a class="anchor" id="title"></a>
+	<section id="titlesection"><div>
 		<a class='header' href='#title'>CalcBee</a>
 		<div style="font-weight:700;font-size:1.3em;margin-bottom:0.6em;margin-top:-0.3em">A calculus competition event for high schoolers.</div>
 		<div style="font-style:italic;">Saturday, TBD @ <a href="#" class='plainlink'>TBD</a></div>
@@ -224,11 +225,13 @@ $(document).ready(function(){
 		$w.css('background-position','0 '+(1600-$w.scrollTop()/4)+'px');
 		
 		//highlighting navbar items
-		cmp with tops of each anchorlink.
+		//cmp with tops of each anchorlink.
 		$a=$(".anchor");
+		
 		$a.each(function(){
-			if($(this).offset().top>$w.offset().top){
-				$('#navbar a[href^="'+$a.itemBefore(this).href+'"]').hover();//uh
+			if($(this).offset().top > -200){//Half min-height of .content
+				$('#navbar a[href^="#"]').removeClass("hover");
+				$('#navbar a[href^="#'+$(this).attr("id")+'"]').addClass("hover");//$a.eq($a.index($(this))-1).attr("id")
 				return false;
 			}
 		});
