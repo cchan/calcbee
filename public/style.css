@@ -50,8 +50,8 @@ font-weight:bold;
 	-ms-transition:all 0.5s;
 	transition:all 0.5s;
 }
-.bg.h:hover{background-color:#222;}
-.bgr.h:hover{background-color:#ffb;}
+.bg.h:hover, .bg.h.hover{background-color:#444;}
+.bgr.h:hover, .bgr.h.hover{background-color:#ffb;}
 
 /*The fixed thing at the top.*/
 #navbar{
@@ -104,15 +104,15 @@ font-weight:bold;
 }
 
 /*Title slide*/
-#title{width:100%;height:100%;}
-#title>div{
+section#titlesection{width:100%;height:100%;}
+section#titlesection>div{
 	position:absolute;
 	top:15%;bottom:15%;
 	left:10%;right:10%;
 	background-color:rgba(0,0,0,0.7);
 	padding:50px;
 }
-#title a.header{color:#ff0;}/*It turns the :visited color. Hacky but the easiest way.*/
+section#titlesection a.header{color:#ff0;}/*It turns the :visited color. Hacky but the easiest way.*/
 .btn{
 	display:inline-block;
 	width:140px;
