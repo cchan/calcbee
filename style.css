@@ -28,7 +28,10 @@ a.header{
 	display:inline-block;
 	width:100%;
 }
-p{margin-bottom:1em;}
+p{
+margin-bottom:1em;
+text-indent:2em;
+}
 
 h1,h2,h3{
 margin:0px;
