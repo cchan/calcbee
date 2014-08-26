@@ -2,7 +2,7 @@
 <!--
 standards compliance, cross-browser-ness, cross-resolution-ness, mobility @media
 logo...
-JS SN(others?) GA HBS
+JS SN(others?)
 -->
 <html lang='en'>
 <head>
@@ -53,10 +53,11 @@ JS SN(others?) GA HBS
 
 <!--Layout concept derived and modified from http://lexhack.org-->
 <div id="wrapper">
-	<section id="title"><div>
+	<a class="anchor" id="title"></a>
+	<section id="titlesection"><div>
 		<a class='header' href='#title'>CalcBee</a>
 		<div style="font-weight:700;font-size:1.3em;margin-bottom:0.6em;margin-top:-0.3em">A calculus competition event for high schoolers.</div>
-		<div style="font-style:italic;">Saturday, TBD @ <a href="#" class='plainlink'>TBD</a></div>
+		<div style="font-style:italic;">Saturday, TBD @ <a href="https://www.google.com/maps/place/Massachusetts+Institute+of+Technology/" class='plainlink'>TBD, MIT</a></div>
 		<div>
 			<a href="#contest" class='btn bg h'>Contest</a>
 			<a href="#about" class='btn bg h'>About</a>
@@ -72,6 +73,8 @@ JS SN(others?) GA HBS
 			<p>If you have any questions, feel free to contact us at <a class="plainlink" href="mailto:info@calcbee.org">info@calcbee.org</a>.</p>
 			<h3>Location</h3>
 			<p>The contest location isn't determined yet, but we'll make sure to update you as soon as we know!</p>
+			<h3>Lunch</h3>
+			<p>Lunch is provided, as part of the registration cost. <!--It will be... . Email us at info@calcbee.org if you have any dietary concerns or allergies.--></p>
 			<h3>Rules</h3>
 			<p>The contest itself is being written at the moment and is prone to changes, so we'll update this with the rules as soon as it's finalized.</p>
 			<!--<p>CalcBee consists of three parts:</p>
@@ -118,6 +121,14 @@ JS SN(others?) GA HBS
 				<h3>On-site staffers</h3>
 				Ahaan Rungta<br>
 				Kavish Gandhi<br>
+				Runpeng Liu<br>
+				Ryan Normandin<br>
+				Asra Ali<br>
+				Colin Fredricks<br>
+				Xiaoyu He<br>
+				Daniel Shaar<br>
+				Lawrence Chiou<br>
+				Leigh Marie Braswell<br>
 			</div>
 			<br>
 			<p>We're affiliated with the <a class='plainlink' href="http://www.onlinescienceolympiads.org">Online Science Olympiads</a>.
@@ -203,12 +214,12 @@ JS SN(others?) GA HBS
 <div class="error-message" id="2126813842_errorMessage"></div>
 <div class="required-message">This is a required question</div>
 </div></div></div>
-<input type="hidden" name="draftResponse" value="[,,&quot;-4919887307350031830&quot;]
+<input type="hidden" name="draftResponse" value="[,,&quot;-7335476473811327156&quot;]
 ">
 <input type="hidden" name="pageHistory" value="0">
 
 
-<input type="hidden" name="fbzx" value="-4919887307350031830">
+<input type="hidden" name="fbzx" value="-7335476473811327156">
 
 <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
 <input type="submit" name="submit" value="Submit" id="ss-submit">
@@ -217,7 +228,7 @@ JS SN(others?) GA HBS
 		</div>
 	</section>
 	<footer>
-		<div class='bg h' title='Coded in HTML, CSS, and JavaScript by Clive Chan, 2014.'>&copy; CalcBee 2014.</div>
+		<div class='bg h' title='Coded in HTML, CSS, and JavaScript by Clive Chan, 2014.'>© CalcBee 2014.</div>
 	</footer>
 </div>
 
@@ -233,8 +244,8 @@ $(document).ready(function(){
 	    e.preventDefault();
 		
 	    var target = this.hash;
-	    $target = $(target);
-
+	    var $target = $(target);
+		
 	    $w.stop().animate({
 	        'scrollTop': $w.scrollTop() + $target.offset().top - $w.offset().top
 	    }, 500, 'swing', function () {
@@ -253,15 +264,18 @@ $(document).ready(function(){
 		//cmp with tops of each anchorlink.
 		$a=$(".anchor");
 		$a.each(function(){
-			if($(this).offset().top>$w.offset().top){
-				$('#navbar a[href^="'+$a.itemBefore(this).href+'"]').hover();//uh
+			if($(this).offset().top > -200){//~Half (min-)height of .content
+				var $new=$('#navbar a[href^="#'+$(this).attr("id")+'"]');
+				if(!$new.hasClass("hover")){//Only if it's doesn't already have the class. Speed.
+					ga('send', 'event', $(this).attr("id"), 'scroll', 'nav');//Hey, GA! They scrolled down!
+					$('#navbar a[href^="#"]').removeClass("hover");
+					$new.addClass("hover");
+				}
 				return false;
 			}
 		});
-	}).scroll();
-	
-	
-});
+	}).scroll();//To align the background-position and highlight the first nav item, even before any scrolling happens.
+});//document-ready
 </script>
 </body>
 </html>
