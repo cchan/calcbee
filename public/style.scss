@@ -1,0 +1,218 @@
+/*Main stylesheet for CalcBee.*/
+
+$yellow: #ff0;
+$black: #000;
+@mixin transition($t){-webkit-transition:$t;-moz-transition:$t;-o-transition:$t;-ms-transition:$t;transition:$t;}
+@mixin border-radius($t){-webkit-border-radius:$t;-moz-border-radius:$t;-o-border-radius:$t;-ms-border-radius:$t;border-radius:$t;}
+@mixin transform($t){-webkit-transform:$t;-moz-transform:$t;-o-transform:$t;-ms-transform:$t;transform:$t;}
+
+/*bg for yellow on black, bgr for reverse; add h for hover change*/
+.bg{color:$yellow;background-color:$black;}
+.bg.last{color:$black;background-color:$yellow;}
+.bg.h,.bg.last.h{/*also for box-shadow buttons.*/
+	@include transition(all 0.5s);
+}
+.bg.h:hover, .bg.h.hover{background-color:#444;}
+.bg.last.h:hover, .bg.last.h.hover{background-color:#ffb;}
+
+
+/*General styles*/
+body{
+	margin:0px;padding:0px;
+	font-family:Comfortaa, Open Sans, Droid Sans, Helvetica, Arial, sans-serif;
+	/*Open Sans doesn't have bold.*/
+	font-weight:400;
+	font-size:14pt;
+	color:#ff0;
+	text-align:center;
+	overflow:hidden;
+}
+a{
+	text-decoration:none;
+	&.plainlink{color:#cc6;text-decoration:underline;}
+	&:active{color:#fff;}
+	&.anchor{
+		display:block;
+		position:relative;
+		top:-50px;
+		visibility:hidden;
+	}
+	&.header{
+		font-size:54pt;
+		height:100px;
+		line-height:100px;
+		font-weight:700;
+		display:inline-block;
+		width:100%;
+	}
+}
+p{
+	margin-bottom:1em;
+	text-indent:2em;
+}
+h1,h2,h3{
+	margin:0px;
+	margin-top:1em;
+}
+
+/*The fixed thing at the top.*/
+#navbar{
+	position:fixed;
+	top:0px;left:0px;right:0px;
+	height:50px;
+	z-index:1000;
+	background-color:rgba(0,0,0,0.7);
+	/*--todo--hm semitransparent? :)*/
+	*{
+		height:50px;line-height:50px;
+		display:inline-block;
+		position:relative;
+	}
+}
+#logo{
+	@extend .bg,.h;
+	width:200px;
+	font-size:30pt;
+	vertical-align:top;/*Yaugh. The default is vertical-align: baseline, which aligns its baseline to the parent's baseline.*/
+}
+#fb,#tw,#aops,#mail{
+	width:60px;
+	margin:0px;padding:0px;padding-top:10px;
+	top:-10px;
+	@include transition(top 0.5s);
+	&:hover{
+		top:0px;
+	}
+}
+#fb{background-color:#3B5998;}
+#tw{background-color:#00aced;}
+#aops{background-color:#62912B;}
+#mail{background-color:#999999;}
+.navlinks a{
+	@extend .bg,.h;
+	padding:0px 10px;
+	&:last-of-type{@extend .last;}
+}
+
+
+/*The bottom 90%, fixed and scrollable by itself.*/
+#wrapper{
+	position:fixed;
+	top:0px;left:0px;right:0px;bottom:0px;
+	overflow-y:scroll;
+	zindex:0;
+	-webkit-overflow-scrolling:touch;
+	overflow-x:hidden;
+	
+	background-image:url('img/bg1.png');
+	background-position:top center;
+}
+
+/*Title slide*/
+#titlesection{width:100%;height:100%;}
+#titlesection>article{
+	position:absolute;
+	top:15%;bottom:15%;
+	left:10%;right:10%;
+	background-color:rgba(0,0,0,0.7);
+	padding:50px;
+}
+#titlesection a.header{color:#ff0;}/*It turns the :visited color. Hacky but the easiest way.*/
+#titlesection .btns a{
+	@extend .bg,.h;
+	display:inline-block;
+	width:140px;
+	height:60px;line-height:60px;
+	margin:10px 20px;
+	&:hover{
+		-moz-box-shadow: 0 0 20px #ff0;
+		-webkit-box-shadow: 0 0 20px #ff0;
+		box-shadow: 0 0 20px #ff0;
+		filter:progid:DXImageTransform.Microsoft.Glow(Color=yellow,Strength=20);
+		z-index:10000;
+	}
+	&:last-of-type:hover{
+		-moz-box-shadow: 0 0 50px #000;
+		-webkit-box-shadow: 0 0 50px #000;
+		box-shadow: 0 0 50px #000;
+		filter:progid:DXImageTransform.Microsoft.Glow(Color=black,Strength=50);
+		z-index:10000;
+	}
+}
+
+/*All those arrows all over the place, probably from http://cowboy.vc/images/upArrow.png*/
+/*http://blog.vivekv.com/rotate-image-360deg-when-mouse-hover-using-css-3.html*/
+.intro-arrow{height:60px;opacity:0.5;}/*At the bottom of the title slide*/
+.uparrow{/*On the side of each header bar*/
+	height:100px;
+	position:absolute;right:0px;
+	opacity:0.3;
+}
+.intro-arrow,.uparrow{
+	@include transition(all 0.8s);
+	overflow:hidden;
+	&:hover{
+		@include transform(rotate(360deg));
+		opacity:1.0;
+	}
+}
+
+
+/*For each slide*/
+section header a.return{
+    background-image: url('img/uparrow.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+}
+section header .header{
+	@extend .bg;
+	border-top:solid 1px #ff0;/*contrast*/
+}
+section:last-of-type header .header{
+	@extend .last;
+	border-top:solid 1px #000;
+}
+article{
+	display:block;
+	text-align:left;
+	padding:2% 10%;
+	min-height:350px;
+	background-color:rgba(0,0,0,0.7);
+	.h2,.h3{
+		margin-left:-1em;
+		font-weight:bold;
+	}
+	img{/*Sponsors*/
+		margin:20px;
+		height:100px;
+	}
+}
+
+/*Changing GForms.*/
+#reg{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	.ss-required-asterisk{color:red;}
+	.error-message, .required-message, .ss-password-warning{display:none;}
+	.ss-choices{list-style-type:none;}
+	.ss-form-question{margin-bottom:20px;}
+	input{
+		color:black;margin-left:1em;
+		&#ss-submit{margin-left:0;}
+	}
+}
+
+/*Footer.*/
+footer{
+	display:block;
+	padding:20px 0;
+	background-color:rgba(0,0,0,0.7);
+	div{
+		@extend .bg,.h;
+		width:15%;min-width:250px;
+		margin:0 auto;
+		@include border-radius(4px);
+	}
+}
