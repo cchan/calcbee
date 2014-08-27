@@ -1,258 +1,201 @@
 /*Main stylesheet for CalcBee.*/
-/*bg for yellow on black, bgr for reverse; add h for hover change*/
-.bg, #logo, .navlinks a, #titlesection .btns a, section header .header, footer div {
-  color: #ff0;
-  background-color: #000; }
-
-.bg.last, .last#logo, .navlinks a#logo:last-of-type, section:last-of-type header #logo.header, .navlinks a.last, .navlinks a:last-of-type, .navlinks #titlesection .btns a:last-of-type, #titlesection .btns .navlinks a:last-of-type, #titlesection .btns a.last, #titlesection .btns section:last-of-type header a.header, section:last-of-type header #titlesection .btns a.header, section header .last.header, section:last-of-type header .header, footer div.last {
-  color: #000;
-  background-color: #ff0; }
-
-.bg.h, #logo, .navlinks a, #titlesection .btns a, section header .h.header, section header .navlinks a.header, .navlinks section header a.header, section header footer div.header, footer section header div.header, footer div, .bg.last.h, .last#logo, .navlinks a#logo:last-of-type, section:last-of-type header #logo.header, .navlinks a.last, .navlinks a:last-of-type, .navlinks section:last-of-type header a.header, section:last-of-type header .navlinks a.header, .navlinks #titlesection .btns a:last-of-type, #titlesection .btns .navlinks a:last-of-type, #titlesection .btns a.last, #titlesection .btns section:last-of-type header a.header, section:last-of-type header #titlesection .btns a.header, section header .last.h.header, section:last-of-type header .h.header, section:last-of-type header footer div.header, footer section:last-of-type header div.header, footer div.last {
-  /*also for box-shadow buttons.*/
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s; }
-
-.bg.h:hover, #logo:hover, .navlinks a:hover, #titlesection .btns a:hover, section header .h.header:hover, footer div:hover, .bg.h.hover, .hover#logo, .navlinks a.hover, #titlesection .btns a.hover, section header .h.hover.header, footer div.hover {
-  background-color: #444; }
-
-.bg.last.h:hover, .last#logo:hover, .navlinks a#logo:hover:last-of-type, section:last-of-type header #logo.header:hover, .navlinks a.last:hover, .navlinks a:hover:last-of-type, .navlinks section:last-of-type header a.header:hover, section:last-of-type header .navlinks a.header:hover, .navlinks #titlesection .btns a:hover:last-of-type, #titlesection .btns .navlinks a:hover:last-of-type, #titlesection .btns a.last:hover, #titlesection .btns section:last-of-type header a.header:hover, section:last-of-type header #titlesection .btns a.header:hover, section header .last.h.header:hover, section:last-of-type header .h.header:hover, section:last-of-type header footer div.header:hover, footer section:last-of-type header div.header:hover, footer div.last:hover, .bg.last.h.hover, .last.hover#logo, .navlinks a.hover#logo:last-of-type, section:last-of-type header .hover#logo.header, .navlinks a.last.hover, .navlinks a.hover:last-of-type, .navlinks section:last-of-type header a.hover.header, section:last-of-type header .navlinks a.hover.header, .navlinks #titlesection .btns a.hover:last-of-type, #titlesection .btns .navlinks a.hover:last-of-type, #titlesection .btns a.last.hover, #titlesection .btns section:last-of-type header a.hover.header, section:last-of-type header #titlesection .btns a.hover.header, section header .last.h.hover.header, section:last-of-type header .h.hover.header, section:last-of-type header footer div.hover.header, footer section:last-of-type header div.hover.header, footer div.last.hover {
-  background-color: #ffb; }
 
 /*General styles*/
-body {
-  margin: 0px;
-  padding: 0px;
-  font-family: Comfortaa, Open Sans, Droid Sans, Helvetica, Arial, sans-serif;
-  /*Open Sans doesn't have bold.*/
-  font-weight: 400;
-  font-size: 14pt;
-  color: #ff0;
-  text-align: center;
-  overflow: hidden; }
+body{
+	margin:0px;padding:0px;
+	font-family:Comfortaa, Open Sans, Droid Sans, Helvetica, Arial, sans-serif;
+	/*Open Sans doesn't have bold.*/
+	font-weight:400;
+	font-size:14pt;
+	color:#ff0;
+	text-align:center;
+	overflow:hidden;
+}
+a{text-decoration:none;}
+a.plainlink{color:#cc6;text-decoration:underline;}
+a:active{color:#fff;}
+a.anchor{
+	display:block;
+	position:relative;
+	top:-50px;
+	visibility:hidden;
+}
+a.header{
+	font-size:54pt;
+	height:100px;
+	line-height:100px;
+	font-weight:700;
+	display:inline-block;
+	width:100%;
+}
+p{
+margin-bottom:1em;
+text-indent:2em;
+}
 
-a {
-  text-decoration: none; }
-  a.plainlink {
-    color: #cc6;
-    text-decoration: underline; }
-  a:active {
-    color: #fff; }
-  a.anchor {
-    display: block;
-    position: relative;
-    top: -50px;
-    visibility: hidden; }
-  a.header {
-    font-size: 54pt;
-    height: 100px;
-    line-height: 100px;
-    font-weight: 700;
-    display: inline-block;
-    width: 100%; }
+h1,h2,h3{
+margin:0px;
+margin-top:1em;
+}
+.content h2, .content h3{
+margin-left:-1em;
+font-weight:bold;
+}
 
-p {
-  margin-bottom: 1em;
-  text-indent: 2em; }
-
-h1, h2, h3 {
-  margin: 0px;
-  margin-top: 1em; }
+/*Since we have so much of it, bgcolor/color style classes.*/
+/*bg for yellow on black, bgr for reverse; add h for hover change*/
+.bg{color:#ff0;background-color:#000;}
+.bgr{color:#000;background-color:#ff0;}
+.bg.h,.bgr.h{/*also for box-shadow buttons.*/
+	-webkit-transition:all 0.5s;
+	-moz-transition:all 0.5s;
+	-o-transition:all 0.5s;
+	-ms-transition:all 0.5s;
+	transition:all 0.5s;
+}
+.bg.h:hover, .bg.h.hover{background-color:#444;}
+.bgr.h:hover, .bgr.h.hover{background-color:#ffb;}
 
 /*The fixed thing at the top.*/
-#navbar {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  height: 50px;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7);
-  /*--todo--hm semitransparent? :)*/ }
-  #navbar * {
-    height: 50px;
-    line-height: 50px;
-    display: inline-block;
-    position: relative; }
+#navbar{
+	position:fixed;
+	top:0px;left:0px;right:0px;
+	height:50px;
+	z-index:1000;
+	background-color:rgba(0,0,0,0.7);
+	/*--todo--hm semitransparent? :)*/
+}
+#navbar *{
+	height:50px;line-height:50px;
+	display:inline-block;
+	position:relative;
+}
+#logo{
+	width:200px;
+	font-size:30pt;
+	vertical-align:top;/*Yaugh. The default is vertical-align: baseline, which aligns its baseline to the parent's baseline.*/
+}
+.sn{
+	width:60px;
+	margin:0px;padding:0px;padding-top:10px;
+	top:-10px;
+	-webkit-transition:top 0.5s;
+	-moz-transition:top 0.5s;
+	-o-transition:top 0.5s;
+	-ms-transition:top 0.5s;
+	transition:top 0.5s;
+}
+.sn:hover{top:0px;}
+#fb{background-color:#3B5998;}
+#tw{background-color:#00aced;}
+#aops{background-color:#62912B;}
+#mail{background-color:#999999;}
+.navlink{padding:0px 10px;}
 
-#logo {
-  width: 200px;
-  font-size: 30pt;
-  vertical-align: top;
-  /*Yaugh. The default is vertical-align: baseline, which aligns its baseline to the parent's baseline.*/ }
-
-#fb, #tw, #aops, #mail {
-  width: 60px;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 10px;
-  top: -10px;
-  -webkit-transition: top 0.5s;
-  -moz-transition: top 0.5s;
-  -o-transition: top 0.5s;
-  -ms-transition: top 0.5s;
-  transition: top 0.5s; }
-  #fb:hover, #tw:hover, #aops:hover, #mail:hover {
-    top: 0px; }
-
-#fb {
-  background-color: #3B5998; }
-
-#tw {
-  background-color: #00aced; }
-
-#aops {
-  background-color: #62912B; }
-
-#mail {
-  background-color: #999999; }
-
-.navlinks a {
-  padding: 0px 10px; }
 
 /*The bottom 90%, fixed and scrollable by itself.*/
-#wrapper {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  overflow-y: scroll;
-  zindex: 0;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
-  background-image: url("img/bg1.png");
-  background-position: top center; }
+#wrapper{
+	position:fixed;
+	top:0px;left:0px;right:0px;bottom:0px;
+	overflow-y:scroll;
+	zindex:0;
+	-webkit-overflow-scrolling:touch;
+	overflow-x:hidden;
+	
+	background-image:url('img/bg1.png');
+	background-position:top center;
+}
 
 /*Title slide*/
-#titlesection {
-  width: 100%;
-  height: 100%; }
+section#titlesection{width:100%;height:100%;}
+section#titlesection>div{
+	position:absolute;
+	top:15%;bottom:15%;
+	left:10%;right:10%;
+	background-color:rgba(0,0,0,0.7);
+	padding:50px;
+}
+section#titlesection a.header{color:#ff0;}/*It turns the :visited color. Hacky but the easiest way.*/
+.btn{
+	display:inline-block;
+	width:140px;
+	height:60px;line-height:60px;
+	margin:10px 20px;
+}
+.btn.bg.h:hover{
+-moz-box-shadow: 0 0 20px #ff0;
+-webkit-box-shadow: 0 0 20px #ff0;
+box-shadow: 0 0 20px #ff0;
+filter:progid:DXImageTransform.Microsoft.Glow(Color=yellow,Strength=20);
+z-index:10000;
+}
+.btn.bgr.h:hover{
+-moz-box-shadow: 0 0 50px #000;
+-webkit-box-shadow: 0 0 50px #000;
+box-shadow: 0 0 50px #000;
+filter:progid:DXImageTransform.Microsoft.Glow(Color=black,Strength=50);
+z-index:10000;
+}
 
-#titlesection > article {
-  position: absolute;
-  top: 15%;
-  bottom: 15%;
-  left: 10%;
-  right: 10%;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 50px; }
-
-#titlesection a.header {
-  color: #ff0; }
-
-/*It turns the :visited color. Hacky but the easiest way.*/
-#titlesection .btns a {
-  display: inline-block;
-  width: 140px;
-  height: 60px;
-  line-height: 60px;
-  margin: 10px 20px; }
-  #titlesection .btns a:hover {
-    -moz-box-shadow: 0 0 20px #ff0;
-    -webkit-box-shadow: 0 0 20px #ff0;
-    box-shadow: 0 0 20px #ff0;
-    filter: progid:DXImageTransform.Microsoft.Glow(Color=yellow,Strength=20);
-    z-index: 10000; }
-  #titlesection .btns a:last-of-type:hover {
-    -moz-box-shadow: 0 0 50px #000;
-    -webkit-box-shadow: 0 0 50px #000;
-    box-shadow: 0 0 50px #000;
-    filter: progid:DXImageTransform.Microsoft.Glow(Color=black,Strength=50);
-    z-index: 10000; }
-
-/*All those arrows all over the place, probably from http://cowboy.vc/images/upArrow.png*/
+/*All those arrows all over the place*/
 /*http://blog.vivekv.com/rotate-image-360deg-when-mouse-hover-using-css-3.html*/
-.intro-arrow {
-  height: 60px;
-  opacity: 0.5; }
+.downarrow{height:60px;opacity:0.5;}
+.uparrow{
+	height:100px;
+	position:absolute;right:0px;
+	opacity:0.3;
+}
+.downarrow,.uparrow{
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+	overflow:hidden;
+}
+.downarrow:hover,.uparrow:hover{
+	-webkit-transform:rotate(360deg);
+	-moz-transform:rotate(360deg); 
+	-o-transform:rotate(360deg);
+	-ms-transform:rotate(360deg);
+	transform:rotate(360deg);
+	opacity:1.0;
+}
 
-/*At the bottom of the title slide*/
-.uparrow {
-  /*On the side of each header bar*/
-  height: 100px;
-  position: absolute;
-  right: 0px;
-  opacity: 0.3; }
-
-.intro-arrow, .uparrow {
-  -webkit-transition: all 0.8s;
-  -moz-transition: all 0.8s;
-  -o-transition: all 0.8s;
-  -ms-transition: all 0.8s;
-  transition: all 0.8s;
-  overflow: hidden; }
-  .intro-arrow:hover, .uparrow:hover {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-    opacity: 1.0; }
 
 /*For each slide*/
-section header a.return {
-  background-image: url("img/uparrow.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: right; }
+header>.header{border-top:solid 1px #ff0;}
+header>.header.bgr{border-top:solid 1px #000;}
+.content{
+	text-align:left;
+	padding:2% 10%;
+	min-height:350px;
+	background-color:rgba(0,0,0,0.7);
+}
 
-section header .header {
-  border-top: solid 1px #ff0;
-  /*contrast*/ }
+/*Sponsors*/
+.content img{
+margin:20px;
+height:100px;
+}
 
-section:last-of-type header .header {
-  border-top: solid 1px #000; }
-
-article {
-  display: block;
-  text-align: left;
-  padding: 2% 10%;
-  min-height: 350px;
-  background-color: rgba(0, 0, 0, 0.7); }
-  article .h2, article .h3 {
-    margin-left: -1em;
-    font-weight: bold; }
-  article img {
-    /*Sponsors*/
-    margin: 20px;
-    height: 100px; }
-
-/*Changing GForms.*/
-#reg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-  #reg .ss-required-asterisk {
-    color: red; }
-  #reg .error-message, #reg .required-message, #reg .ss-password-warning {
-    display: none; }
-  #reg .ss-choices {
-    list-style-type: none; }
-  #reg .ss-form-question {
-    margin-bottom: 20px; }
-  #reg input {
-    color: black;
-    margin-left: 1em; }
-    #reg input#ss-submit {
-      margin-left: 0; }
+/*Registration.*/
+#reg{display:block;margin-left:auto;margin-right:auto;}
+#reg .ss-required-asterisk{color:red;}
+#reg .error-message, #reg .required-message, #reg .ss-password-warning{display:none;}
+#reg .ss-choices{list-style-type:none;}
+#reg input{color:black;margin-left:1em;}
+#reg input#ss-submit{margin-left:0;}
+#reg .ss-form-question{margin-bottom:20px;}
 
 /*Footer.*/
-footer {
-  display: block;
-  padding: 20px 0;
-  background-color: rgba(0, 0, 0, 0.7); }
-  footer div {
-    width: 15%;
-    min-width: 250px;
-    margin: 0 auto;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -o-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px; }
-
-/*# sourceMappingURL=style.css.map */
+footer{
+	display:block;
+	padding:20px 0;
+	background-color:rgba(0,0,0,0.7);
+}
+footer div{
+	width:15%;min-width:250px;
+	margin:0 auto;
+	border-radius:4px;/*Doesn't matter about compatibility.*/
+}
