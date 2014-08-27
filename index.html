@@ -28,26 +28,25 @@ JS SN(others?)
 
 	  ga('create', 'UA-36558374-2', 'auto');
 	  ga('send', 'pageview');
-
 	</script>
 </head>
 
 <body>
 <div id="navbar">
 	<div style="float:left">
-		<a id="logo" href="#title" class='bg h'>CalcBee</a><!--
+		<a href="#title"><h1 id="logo">CalcBee</h1></a><!--
 		(icons from http://www.designsmix.com/resources/free-social-media-icon-sets-with-psd-and-vector-resources/)
-		--><a onclick="alert('Coming soon.');" href="#" id="fb" class='sn'><img src="img/fb.png" title="Find us on Facebook" alt="Facebook"/></a><!--
-		--><a onclick="alert('Coming soon.');" href="#" id="tw" class='sn'><img src="img/tw.png" title="Find us on Twitter" alt="Twitter"/></a><!--
-		--><a onclick="alert('Coming soon.');" href="#" id="aops" class='sn'><img src="img/aops.png" title="Find us on Art of Problem Solving" alt="Art of Problem Solving"/></a><!--
-		--><a href="mailto:info@calcbee.org" id="mail" class='sn'><img src="img/mail.png" title="Email Us" alt="Email Us"/></a>
+		--><a onclick="alert('Coming soon.');" href="#" id="fb"><img src="img/fb.png" title="Find us on Facebook" alt="Facebook"/></a><!--
+		--><a onclick="alert('Coming soon.');" href="#" id="tw"><img src="img/tw.png" title="Find us on Twitter" alt="Twitter"/></a><!--
+		--><a onclick="alert('Coming soon.');" href="#" id="aops"><img src="img/aops.png" title="Find us on Art of Problem Solving" alt="Art of Problem Solving"/></a><!--
+		--><a href="mailto:info@calcbee.org" id="mail"><img src="img/mail.png" title="Email Us" alt="Email Us"/></a>
 	</div>
-	<div style="float:right">
-		<a href="#title" class='navlink bg h'>Main</a><!--
-		--><a href="#contest" class='navlink bg h'>Contest</a><!--
-		--><a href="#about" class='navlink bg h'>About</a><!--
-		--><a href="#sponsors" class='navlink bg h'>Sponsors</a><!--
-		--><a href="#register" class='navlink bgr h'>Register</a>
+	<div style="float:right" class='navlinks'>
+		<a href="#title">Main</a><!--
+		--><a href="#contest">Contest</a><!--
+		--><a href="#about">About</a><!--
+		--><a href="#sponsors">Sponsors</a><!--
+		--><a href="#register">Register</a>
 	</div>
 </div>
 
@@ -58,18 +57,19 @@ JS SN(others?)
 		<a class='header' href='#title'>CalcBee</a>
 		<div style="font-weight:700;font-size:1.3em;margin-bottom:0.6em;margin-top:-0.3em">A calculus competition event for high schoolers.</div>
 		<div style="font-style:italic;">Saturday, TBD @ <a href="https://www.google.com/maps/place/Massachusetts+Institute+of+Technology/" class='plainlink'>TBD, MIT</a></div>
-		<div>
-			<a href="#contest" class='btn bg h'>Contest</a>
-			<a href="#about" class='btn bg h'>About</a>
-			<a href="#sponsors" class='btn bg h'>Sponsors</a>
+		<div class="btns">
+			<a href="#contest">Contest</a>
+			<a href="#about">About</a>
+			<a href="#sponsors">Sponsors</a>
+			<br>
+			<a href="#register" class="last">Register</a>
 		</div>
-		<div><a href="#register" class="btn bgr h">Register</a></div>
-		<div><a href="#contest"><img src="img/downarrow.png" class="downarrow"/></a></div>
+		<div><a href="#contest"><img src="img/downarrow.png" class="intro-arrow"/></a></div>
 	</div></section>
 	<a class="anchor" id="contest"></a>
 	<section>
-		<header><a class='header bg' href='#contest'>Contest</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
-		<div class='content'>
+		<header><a class='header' href='#contest'>Contest</a><a href="#title" class="return"></a></header>
+		<article>
 			<p>If you have any questions, feel free to contact us at <a class="plainlink" href="mailto:info@calcbee.org">info@calcbee.org</a>.</p>
 			<h3>Location</h3>
 			<p>The contest location isn't determined yet, but we'll make sure to update you as soon as we know!</p>
@@ -97,8 +97,8 @@ JS SN(others?)
 	</section>
 	<a class="anchor" id="about"></a>
 	<section>
-		<header><a class='header bg' href='#about'>About</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
-		<div class='content'>
+		<header><a class='header' href='#about'>About</a><a href="#title" class="return"></a></header>
+		<article>
 			<h2>Staff</h2>
 			<div>​
 				<!--Chrome randomly adds &#8203; blankline here.-->
@@ -137,8 +137,8 @@ JS SN(others?)
 	</section>
 	<a class="anchor" id="sponsors"></a>
 	<section>
-		<header><a class='header bg' href='#sponsors'>Sponsors</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
-		<div class='content' style="text-align:center;">
+		<header><a class='header' href='#sponsors'>Sponsors</a><a href="#title" class="return"></a></header>
+		<article style="text-align:center;">
 			<a href="http://wolfram.com/"><img src="img/wolfram.png" alt="Wolfram"/></a>
 			<a href="http://www.harvard.com/"><img src="img/harvardbookstore.png" alt="Harvard Bookstore"/></a>
 			<a href="http://brilliant.org/"><img src="img/brilliant.png" alt="Brilliant"/></a>
@@ -147,8 +147,8 @@ JS SN(others?)
 	</section>
 	<a class="anchor" id="register"></a>
 	<section>
-		<header><a class='header bgr' href='#register'>Register</a><a href="#title"><img src='img/uparrowreg.png' class='uparrow'/></a></header>
-		<div class='content'>
+		<header><a class='header' href='#register'>Register</a><a href="#title" class="return"/></a></header>
+		<article>
 <p>Teams can consist of anywhere from 1 to 5 members, although 5 members is very much recommended. If deemed necessary, we may combine multitudes of small teams into larger teams at the competition.</p>
 <p>Please feel free to contact us at <a href="mailto:info@calcbee.org">info@calcbee.org</a> if you have any questions, comments, or concerns.</p>
 <form id="reg" action="https://docs.google.com/forms/d/1moIoddm96MjRAZljEYda2KcOVFDYPM6s646BFYrMqhY/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
@@ -228,7 +228,7 @@ JS SN(others?)
 		</div>
 	</section>
 	<footer>
-		<div class='bg h' title='Coded in HTML, CSS, and JavaScript by Clive Chan, 2014.'>© CalcBee 2014.</div>
+		<div title='Coded in HTML, CSS, and JavaScript by Clive Chan, 2014.'>© CalcBee 2014.</div>
 	</footer>
 </div>
 
@@ -264,7 +264,7 @@ $(document).ready(function(){
 		//cmp with tops of each anchorlink.
 		$a=$(".anchor");
 		$a.each(function(){
-			if($(this).offset().top > -200){//~Half (min-)height of .content
+			if($(this).offset().top > -200){//~Half (min-)height of <article>
 				var $new=$('#navbar a[href^="#'+$(this).attr("id")+'"]');
 				if(!$new.hasClass("hover")){//Only if it's doesn't already have the class. Speed.
 					ga('send', 'event', $(this).attr("id"), 'scroll', 'nav');//Hey, GA! They scrolled down!
