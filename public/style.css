@@ -3,7 +3,7 @@
 /*General styles*/
 body{
 	margin:0px;padding:0px;
-	font-family:Comfortaa, Open Sans, Droid Sans, Helvetica, Arial, sans-serif;
+	font-family:Georgia, sans-serif;
 	/*Open Sans doesn't have bold.*/
 	font-weight:400;
 	font-size:14pt;
@@ -33,7 +33,10 @@ margin-bottom:1em;
 text-indent:2em;
 }
 
-h1,h2,h3{
+h1,h2,h3,header,.header,.btn,.navlink,#logo{
+font-family:Comfortaa, Open Sans, Droid Sans, Helvetica, Arial, sans-serif;
+}
+h1, h2, h3{
 margin:0px;
 margin-top:1em;
 }
@@ -41,6 +44,7 @@ margin-top:1em;
 margin-left:-1em;
 font-weight:bold;
 }
+.clear { clear: both; }
 
 /*Since we have so much of it, bgcolor/color style classes.*/
 /*bg for yellow on black, bgr for reverse; add h for hover change*/
@@ -98,7 +102,7 @@ font-weight:bold;
 	position:fixed;
 	top:0px;left:0px;right:0px;bottom:0px;
 	overflow-y:scroll;
-	zindex:0;
+	z-index:0;
 	-webkit-overflow-scrolling:touch;
 	overflow-x:hidden;
 	
@@ -107,10 +111,10 @@ font-weight:bold;
 }
 
 /*Title slide*/
-section#titlesection{width:100%;height:100%;}
+section#titlesection{position:relative;width:100%;min-height:100%;height:auto;text-align:center;}
 section#titlesection>div{
 	position:absolute;
-	top:15%;bottom:15%;
+	top:15%;min-height:55%;height:auto;bottom:15%;
 	left:10%;right:10%;
 	background-color:rgba(0,0,0,0.7);
 	padding:50px;
@@ -173,6 +177,24 @@ header>.header.bgr{border-top:solid 1px #000;}
 	background-color:rgba(0,0,0,0.7);
 }
 
+/*Staff Table*/
+#stafftable{
+	margin-top:-10px;
+	width:100%;
+}
+#stafftable td{
+	height:100%;
+	vertical-align:top;
+	width:24.5%;
+	text-align:center;
+}
+#stafftable h2, #stafftable h3{
+	margin:0px;
+}
+#stafftable *{
+	padding:0px;
+}
+
 /*Sponsors*/
 .content img{
 margin:20px;
@@ -180,12 +202,21 @@ height:100px;
 }
 
 /*Registration.*/
+#formtable{
+	margin-top:-10px;
+	width:100%;
+}
+#formtable>tr>td, #formtable>tbody>tr>td{
+	height:100%;
+	vertical-align:top;
+	width:49%;
+}
+#reg h2, #reg h3{margin:0px;}
 #reg{display:block;margin-left:auto;margin-right:auto;}
 #reg .ss-required-asterisk{color:red;}
 #reg .error-message, #reg .required-message, #reg .ss-password-warning{display:none;}
 #reg .ss-choices{list-style-type:none;}
-#reg input{color:black;margin-left:1em;}
-#reg input#ss-submit{margin-left:0;}
+#reg input{color:black;margin-left:0;}
 #reg .ss-form-question{margin-bottom:20px;}
 
 /*Footer.*/
