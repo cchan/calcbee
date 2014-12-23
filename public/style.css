@@ -51,7 +51,9 @@ font-weight:bold;
 /*bg for yellow on black, bgr for reverse; add h for hover change*/
 .bg{color:#ff0;background-color:#000;}
 .bgr{color:#000;background-color:#ff0;}
-.bg.h,.bgr.h{/*also for box-shadow buttons.*/
+.bgr.l{color:#000;background-color:#ff9;}
+.bgr.d{color:#000;background-color:#ee0;}
+.bg.h,.bgr.h,.bgr.l.h,.bgr.d.h{/*also for box-shadow buttons.*/
 	-webkit-transition:all 0.5s;
 	-moz-transition:all 0.5s;
 	-o-transition:all 0.5s;
@@ -59,7 +61,9 @@ font-weight:bold;
 	transition:all 0.5s;
 }
 .bg.h:hover, .bg.h.hover{background-color:#444;}
-.bgr.h:hover, .bgr.h.hover{background-color:#ffb;}
+.bgr.h:hover, .bgr.h.hover{background-color:#ffc;}
+.bgr.l.h:hover, .bgr.l.h.hover{background-color:#ee0;}
+.bgr.d.h:hover, .bgr.d.h.hover{background-color:#ff9;}
 
 /*The fixed thing at the top.*/
 #navbar{
