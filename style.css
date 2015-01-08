@@ -12,6 +12,13 @@ body{
 	overflow:hidden;
 	line-height:1.5em;
 }
+/*http://css-tricks.com/overriding-the-default-text-selection-color-with-css/*/
+::selection {
+  background: #000; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #000; /* Gecko Browsers */
+}
 a{text-decoration:none;}
 a.plainlink{color:#cc6;text-decoration:underline;}
 a:active{color:#fff;}
