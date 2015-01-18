@@ -61,11 +61,11 @@ font-weight:bold;
 .bgr.l{color:#000;background-color:#ff9;}
 .bgr.d{color:#000;background-color:#ee0;}
 .bg.h,.bgr.h,.bgr.l.h,.bgr.d.h{/*also for box-shadow buttons.*/
-	-webkit-transition:all 0.5s;
-	-moz-transition:all 0.5s;
-	-o-transition:all 0.5s;
-	-ms-transition:all 0.5s;
-	transition:all 0.5s;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	transition:all 0.3s;
 }
 .bg.h:hover, .bg.h.hover{background-color:#444;}
 .bgr.h:hover, .bgr.h.hover{background-color:#ffc;}
@@ -105,7 +105,7 @@ font-weight:bold;
 #fb{background-color:#3B5998;}
 #tw{background-color:#00aced;}
 #aops{background-color:#62912B;}
-#mail{background-color:#999999;}
+#mail{background-color:#bbbbbb;}
 #wp{background-color:#ffffff;}
 .navlink{padding:0px 10px;}
 
