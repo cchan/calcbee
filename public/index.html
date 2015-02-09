@@ -1,9 +1,4 @@
 ﻿<!DOCTYPE html>
-<!--
-standards compliance, cross-browser-ness, cross-resolution-ness, mobility @media
-logo...
-JS SN(others?)
--->
 <html lang='en'>
 <head>
 	<meta charset="utf-8">
@@ -34,7 +29,7 @@ JS SN(others?)
 
 <body>
 <div id="navbar">
-	<!--make a front page game thing, catch the bee with functions-->
+	<!--make a front page game thing, catch the (non-moving) bee with functions-->
 	<div style="float:left">
 		<a id="logo" href="#title" class='bg h'>CalcBee</a><!--
 		(icons from http://www.designsmix.com/resources/free-social-media-icon-sets-with-psd-and-vector-resources/ , and wikipedia for wp logo)
@@ -48,7 +43,7 @@ JS SN(others?)
 		--><a href="#contest" class='navlink bg h'>Contest</a><!--
 		--><a href="#about" class='navlink bg h'>About</a><!--
 		--><a href="#sponsors" class='navlink bg h'>Sponsors</a><!--
-		--><a href="#archive" class='navlink bg h'>Archive</a>
+		--><a href="#archives" class='navlink bg h'>Archives</a>
 	</div>
 </div>
 
@@ -58,30 +53,30 @@ JS SN(others?)
 	<section id="titlesection"><div>
 		<a class='header' href='#title'>CalcBee</a>
 		<div style="font-weight:300;font-size:1.3em;margin-bottom:0.7em;">A calculus competition event for high schoolers.</div>
-		<div style="font-style:italic;margin:-0.5em 0 0.5em 0;">Saturday, January 10, 2015 @ <a href="https://whereis.mit.edu/?go=1" class="plainlink">MIT 1-190</a> (it's over!)</div>
+		<div style="font-style:italic;margin:-0.5em 0 0.5em 0;">Saturday, January 10, 2015 @ <a href="https://whereis.mit.edu/?go=1">MIT 1-190</a> (it's over!)</div>
 		<div>
 			<a href="#contest" class='btn bg h'>Contest</a>
 			<a href="#about" class='btn bg h'>About</a>
 			<a href="#sponsors" class='btn bg h'>Sponsors</a>
 		</div>
-		<div><a href="#archive" class="btn bg h">Archive</a></div>
-		<div><a href="#contest"><img src="img/downarrow.png" class="downarrow"/></a></div>
+		<div><a href="#archives" class="btn bg h">Archives</a></div>
+		<div><a href="#contest" class="img"><img src="img/downarrow.png" class="downarrow"/></a></div>
 	</div></section>
 	<a class="anchor" id="contest"></a>
 	<section>
-		<header><a class='header bg' href='#contest'>Contest</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
+		<header><a class='header bg' href='#contest'>Contest</a><a href="#title" class="img"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content'>
 			<p>This is the schedule for CalcBee Winter 2015. It might change, so don't look too closely.</p>
-			<p>CalcBee Winter 2015 took place at 77 Massachusetts Avenue, <a href="https://whereis.mit.edu/?go=1" class="plainlink">MIT Building 1, Room 1-190</a>.</p>
+			<p>CalcBee Winter 2015 took place at 77 Massachusetts Avenue, <a href="https://whereis.mit.edu/?go=1">MIT Building 1, Room 1-190</a>.</p>
 			
 			<table id="schedtable"><td>
-			<tr><th>8:15 – 9:00<td>Check-in, at least $5 payment per person (PAYMENTS MUST BE IN CASH). All proceeds will go to <a href="http://actioninafrica.com/" class="plainlink">Action in Africa</a>.
+			<tr><th>8:15 – 9:00<td>Check-in, at least $5 payment per person (<i>PAYMENTS MUST BE IN CASH</i>). All proceeds will go to <a href="http://actioninafrica.com/">Action in Africa</a>.
 			<tr><th>9:00 – 9:30<td>Rules of Contest and Logistics
 			<tr><th>9:30 – 9:45<td>Individual Round 1 (5 integrals, 10 minutes)
 			<tr><th>9:45 – 10:30<td>Individual Round 2 (10 short-answer general problems, 30 minutes)
 			<tr><th>10:30 – 11:00<td>Individual Round 3 (5 free-response problems, 25 minutes)
 			<tr><th>11:15 – 11:35<td>Team Round (10 problems)
-			<tr><th>11:45 – 13:15<td>Lunch: Food is included. Sponsors are not yet finalized, but the food will be awesome! Please note any dietary restrictions or allergies on the registration form.
+			<tr><th>11:45 – 13:15<td>Lunch: Food is included, and is awesome. Please note any dietary restrictions or allergies on the registration form.
 			<tr><th>13:30 – 14:00<td>Team Relay Rounds: there will be two relay rounds, to be explained on contest day
 			<tr><th>14:00 – 15:00<td>Calculus Mystery Hunt
 			<tr><th>15:00 – 16:00<td>Chess Tournament
@@ -91,56 +86,35 @@ JS SN(others?)
 			</table>
 
 			<p>All problems will test problem-solving skills, with most concepts taken from the fundamental AP Calculus AB curriculum, although some BC concepts may help. The problems will be simple in spirit, but tough to solve!</p>
+
+			<p>Check out our <a href="https://www.dropbox.com/s/jlxzcn2aguxufx0/CalcBeeSample.pdf?dl=0">sample problems</a>, <a href="https://www.dropbox.com/s/u6h2ca2jlb1wdo2/CalcBeeSampleSolutions.pdf?dl=0">sample solutions</a>, and <a href="#archives">Archives</a> for a look at what kinds of problems might be on the contest.
 		</div>
 	</section>
 	<a class="anchor" id="about"></a>
 	<section>
-		<header><a class='header bg' href='#about'>About</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
+		<header><a class='header bg' href='#about'>About</a><a href="#title" class="img"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content'>
 			<p>CalcBee is a live calculus competition organized and run by high school students.</p>
-			<p>We're affiliated with the <a class='plainlink' href="http://www.onlinescienceolympiads.org">Online Science Olympiads</a>.
+			<p>We're affiliated with the <a href="http://www.onlinescienceolympiads.org">Online Science Olympiads</a>.
 			If you're interested in physics, chemistry, or computer science, you should go check out their competitions!</p>
 			<h2 style="text-align:center">Staff</h2>
 			<div>​
 				<!--Chrome randomly adds &#8203; blankline here.-->
-				<table id="stafftable"><tr><td>
+				<table class="coldisplay"><tr><td>
 				<h3>Contest Director</h3>
 				Ahaan Rungta<br>
-				</td><td>
-				<h3>Problem Czars</h3>
-				Ahaan Rungta<br>
-				Yongyi Chen<br>
-				Lewis Chen<br>
-				Sotiri Komissopoulos<br>
-				Jon Claus<br>
-				Kavish Gandhi<br>
-				Joel Brewster Lewis<br>
-				Robin Park<br>
-				Bat Dejean<br>
-				</td><td>
-				<h3>On-site staffers</h3>
-				Ahaan Rungta<br>
-				Daniel Shaar<br>
-				Ilya Andreev<br>
-				Anderson Wang<br>
-				Yongyi Chen<br>
-				Colin Fredericks<br>
-				Runpeng Liu<br>
-				Preston Luthy<br>
-				Trung Phan<br>
-				Allison Mann<br>
 				</td><td>
 				<h3>Webmaster</h3>
 				Clive Chan<br>
 				</td></tr></table>
 				
-			<p>Questions, comments, compliments, or concerns? Feel free to contact us at <a class="plainlink" href="mailto:info@calcbee.org">info@calcbee.org</a>.</p>
+			<p>Questions, comments, compliments, or concerns? Feel free to contact us at <a href="mailto:info@calcbee.org">info@calcbee.org</a>.</p>
 			</div>
 		</div>
 	</section>
 	<a class="anchor" id="sponsors"></a>
 	<section>
-		<header><a class='header bg' href='#sponsors'>Sponsors</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
+		<header><a class='header bg' href='#sponsors'>Sponsors</a><a href="#title" class="img"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content' style="text-align:center;">
 			<img src="img/mitgovcomm.png" alt="MIT Office of Government and Community Relations" style="height:65px;"/>
 			<br>
@@ -155,18 +129,15 @@ JS SN(others?)
 			<br>
 		</div>
 	</section>
-	<a class="anchor" id="archive"></a>
+	<a class="anchor" id="archives"></a>
 	<section>
-		<header><a class='header bg' href='#archive'>Archive</a><a href="#title"><img src='img/uparrow.png' class='uparrow'/></a></header>
+		<header><a class='header bg' href='#archives'>Archives</a><a href="#title" class="img"><img src='img/uparrow.png' class='uparrow'/></a></header>
 		<div class='content'>
-			<h3 style="text-align:center">CalcBee January 2015!</h3>
-			<img style="height:auto;width:45%;" src="img/IMG_0050.JPG"/><img style="height:auto;width:45%;" src="img/IMG_0080.JPG"/><br>
-			<img style="height:auto;width:45%;" src="img/IMG_0105.JPG"/><img style="height:auto;width:45%;" src="img/IMG_0062.JPG"/><br>
-			More CalcBee photos can be found in <b><a class="plainlink" href="https://www.flickr.com/photos/129965737@N07/sets/72157650280015226/">this Flickr album</a></b>.
+			<h2><a class="center" href="jan2015.html">Archive 2015</a></h2>
 		</div>
 	</section>
 	<footer>
-		<div class='bg h' title='Coded in HTML, CSS, and JavaScript by Clive Chan, 2014-2015.'>&copy; CalcBee 2014-2015.</div>
+		<div class='bg h' title='Coded in HTML, CSS, and JavaScript by Clive Chan, 2014-2015.'>&copy; CalcBee 2014-present.</div>
 	</footer>
 </div>
 
