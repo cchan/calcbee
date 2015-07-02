@@ -36,8 +36,10 @@
 			
 			<p>CalcBee January 2015 took place on January 10 in <a href="https://whereis.mit.edu/?go=1">MIT Building 1, Room 1-190</a>.</p>
 			
+			<p>Registration was $5 per person, and a total of $500 was donated to <a href="http://math.mit.edu/research/highschool/primes/index.php">MIT PRIMES</a>.</p>
+			
 			<table id="schedtable" style="text-align:left;"><td>
-				<tr><th>8:15 – 9:00<td>Check-in, at least $5 payment per person (<i>PAYMENTS MUST BE IN CASH</i>). All proceeds will go to <a href="http://actioninafrica.com/">Action in Africa</a>.
+				<tr><th>8:15 – 9:00<td>Check-in</a>.
 				<tr><th>9:00 – 9:30<td>Rules of Contest and Logistics
 				<tr><th>9:30 – 9:45<td>Individual Round 1 (5 integrals, 10 minutes)
 				<tr><th>9:45 – 10:30<td>Individual Round 2 (10 short-answer general problems, 30 minutes)
@@ -47,12 +49,11 @@
 				<tr><th>13:30 – 14:00<td>Team Relay Rounds: there will be two relay rounds, to be explained on contest day
 				<tr><th>14:00 – 15:00<td>Calculus Mystery Hunt
 				<tr><th>15:00 – 16:00<td>Chess Tournament
-				<tr><th>15:00 – 16:00<td>MIT Tour
 				<tr><th>16:00 – 17:00<td>Talk by Guest Speaker Po-Shen Loh, USA IMO Team Leader, Hertz Fellow, and Co-founder of Expii, Inc.
 				<tr><th>17:00<td>Award Ceremony
 			</table>
 
-			<p style="text-align:left">All problems will test problem-solving skills, with most concepts taken from the fundamental AP Calculus AB curriculum, although some BC concepts may help. The problems will be simple in spirit, but tough to solve!</p>
+			<p style="text-align:left">All problems were based on the fundamental AP Calculus AB curriculum, simple in spirit but tough to solve!</p>
 			
 			<br><br>
 			
@@ -144,52 +145,6 @@
 	<footer>
 		<div class='bg h' title='Coded in HTML, CSS, and JavaScript by Clive Chan, 2014-2015.'>&copy; CalcBee 2014-present.</div>
 	</footer>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
-<script>
-$(document).ready(function(){
-	var $w=$('#wrapper');
-	
-	//Smooth scrolling.
-	//Adapted from //http://www.paulund.co.uk/smooth-scroll-to-internal-links-with-jquery
-	$('a[href^="#"]').on('click',function (e) {
-	    e.preventDefault();
-		
-	    var target = this.hash;
-	    var $target = $(target);
-		
-	    $w.stop().animate({
-	        'scrollTop': $w.scrollTop() + $target.offset().top - $w.offset().top
-	    }, 500, 'swing', function () {
-	        window.location.hash = target;
-	    });
-		
-		return false;
-	});
-	//end
-	
-	$w.scroll(function(e){
-		//parallax
-		$w.css('background-position','0 '+(1600-$w.scrollTop()/3)+'px');
-		
-		//highlighting navbar items
-		//cmp with tops of each anchorlink.
-		$a=$(".anchor");
-		$a.each(function(){
-			if($(this).offset().top > -200){//~Half (min-)height of .content
-				var $new=$('#navbar a[href^="#'+$(this).attr("id")+'"]');
-				if(!$new.hasClass("hover")){//Only if it's doesn't already have the class. Speed.
-					ga('send', 'event', $(this).attr("id"), 'scroll', 'nav');//Hey, GA! They scrolled down!
-					$('#navbar a[href^="#"]').removeClass("hover");
-					$new.addClass("hover");
-				}
-				return false;
-			}
-		});
-	}).scroll();//To align the background-position and highlight the first nav item, even before any scrolling happens.
-});//document-ready
-</script>
 </div>
 </body>
 </html>
